@@ -16,6 +16,8 @@
 [![License](https://img.shields.io/badge/license-BSD-blue.svg)](https://github.com/webitproff/telegram-market-cotonti/blob/main/LICENSE)
 ---
 
+<img width="1448" height="1086" alt="telegram-market-cotonti" src="https://github.com/user-attachments/assets/28296423-4dc1-4ef2-aad7-e6a5ee607d94" />
+
 ## Table of Contents
 
 1. [Introduction](#introduction)
