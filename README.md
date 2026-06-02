@@ -2,9 +2,18 @@
 
 ## Complete Guide to Installation, Setup, and Usage
 
-**Author:** webitproff  
+**Author:** [webitproff](https://abuyfile.com/ru/users/webitproff)  
+
+**[DEMO](https://abuyfile.com/ru/market/cotonti/plugs/plagin-tgm4market-integraciya-magazina-cotonti-s-telegram)** 
+
 **Repository:** [https://github.com/webitproff/telegram-market-cotonti](https://github.com/webitproff/telegram-market-cotonti)
 
+[![Version](https://img.shields.io/badge/version-4.3.1-green.svg)](https://github.com/webitproff/telegram-market-cotonti/releases)
+[![Cotonti Compatibility](https://img.shields.io/badge/Cotonti-1.0-orange.svg)](https://github.com/Cotonti/Cotonti)
+[![PHP](https://img.shields.io/badge/PHP-8.4-purple.svg)](https://www.php.net/releases/8_4_0.php)
+[![MySQL](https://img.shields.io/badge/MySQL-8.0-blue.svg)](https://www.mysql.com/)
+[![Bootstrap v5.3.8](https://img.shields.io/badge/Bootstrap-v5.3.8-blueviolet.svg)](https://getbootstrap.com/)
+[![License](https://img.shields.io/badge/license-BSD-blue.svg)](https://github.com/webitproff/telegram-market-cotonti/blob/main/LICENSE)
 ---
 
 ## Table of Contents
@@ -27,7 +36,7 @@
 
 ## Introduction
 
-**tgm4market** is a plugin for the [Cotonti CMF](https://www.cotonti.com/) that fully integrates your online store (built with the **Market** module) with the Telegram messenger. It automatically publishes information about new and updated products to your Telegram channel and embeds the official Telegram Discussion widget on each product page. This allows your subscribers to instantly learn about new items, and visitors to view and leave comments (via Telegram) right from the product card.
+**tgm4market** is a plugin for the [Cotonti CMF](https://github.com/Cotonti/Cotonti) that fully integrates your online store (built with the **Market** module) with the Telegram messenger. It automatically publishes information about new and updated products to your Telegram channel and embeds the official Telegram Discussion widget on each product page. This allows your subscribers to instantly learn about new items, and visitors to view and leave comments (via Telegram) right from the product card.
 
 The plugin eliminates manual posting and on‑site comment moderation: everything happens automatically, while discussions stay in the familiar Telegram environment.
 
