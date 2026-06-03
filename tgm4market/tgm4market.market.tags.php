@@ -42,7 +42,6 @@
 <!-- ENDIF -->
 
  */
-
 defined('COT_CODE') or die('Wrong URL');
 
 require_once cot_incfile('tgm4market', 'plug');
@@ -60,9 +59,31 @@ $config = tgm4market_get_cfg();
 $chat_id = trim($config['chat_id_market']);
 if (empty($chat_id)) return;
 
-$widget = '<script async src="https://telegram.org/js/telegram-widget.js?22" '
-        . 'data-telegram-discussion="' . htmlspecialchars($chat_id . '/' . $message_id) . '" '
-        . 'data-comments-limit="5">'
-        . '</script>';
+// Формируем HTML-контейнер и скрипт ленивой загрузки
+// Ленивая загрузка виджета Telegram
+// скрипт Telegram загружается только когда посетитель доскроллит до виджета.
+$widget = '<div id="tg-discussion-' . $item_id . '" class="tg-discussion-container"></div>';
+$widget .= '<script>
+(function() {
+    var container = document.getElementById("tg-discussion-' . $item_id . '");
+    if (!container) return;
+
+    var observer = new IntersectionObserver(function(entries) {
+        if (entries[0].isIntersecting) {
+            // Создаём скрипт виджета Telegram
+            var script = document.createElement("script");
+            script.async = true;
+            script.src = "https://telegram.org/js/telegram-widget.js?22";
+            script.setAttribute("data-telegram-discussion", "' . htmlspecialchars($chat_id . '/' . $message_id) . '");
+            script.setAttribute("data-comments-limit", "5");
+            container.appendChild(script);
+            // Отключаем наблюдатель
+            observer.disconnect();
+        }
+    }, { threshold: 0 });
+
+    observer.observe(container);
+})();
+</script>';
 
 $t->assign('TGM4MARKET_DISCUSSION', $widget);
