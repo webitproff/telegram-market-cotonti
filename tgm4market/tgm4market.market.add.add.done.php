@@ -29,6 +29,10 @@ require_once cot_incfile('tgm4market', 'plug');
 $item_id = (int)$id;
 if (!$item_id) return;
 
+// Читаем выбранное действие из формы (по умолчанию 'none', чтобы случайно не отправить)
+$action = cot_import('telegram_action', 'P', 'ALP') ?: 'none';
+if ($action !== 'new') return;   // Отправляем только если явно выбрано «Опубликовать как новый»
+
 $config = tgm4market_get_cfg();
 $chat_id = trim($config['chat_id_edit']);
 if (empty($chat_id)) return;
